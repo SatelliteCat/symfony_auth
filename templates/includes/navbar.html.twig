@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<div class="container">
+		<a class="navbar-brand" href="/">Home</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+
+				{% if app.user %}
+					<li class="navbar-item">
+						You are logged in as {{ app.user.username }},
+						<a href="{{ path('app_logout') }}" class="nav-link">logout</a>
+					</li>
+				{% else %}
+					<li class="navbar-item">
+						<a href="/register" class="nav-link">
+							Registration
+						</a>
+					</li>
+					<li class="navbar-item">
+						<a href="/login" class="nav-link">
+							Login
+						</a>
+					</li>
+				{% endif %}
+
+			</ul>
+		</div>
+	</div>
+</nav>

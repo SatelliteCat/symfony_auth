@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Profile
+{% endblock %}
+
+{% block body %}
+	<h1>Profile</h1>
+	<div class="form-group">
+		<label for="inputFirstName">First name</label>
+		<input type="text" value="{{ app.user.firstname }}" name="firstname" id="inputFirstName" class="form-control" disabled>
+	</div>
+	<div class="form-group">
+		<label for="inputFirstName">Last name</label>
+		<input type="text" value="{{ app.user.lastname }}" name="lastname" id="inputLastName" class="form-control" disabled>
+	</div>
+	<div class="form-group">
+		<label for="inputPhone">Phone</label>
+		<input type="text" value="{{ app.user.phone }}" name="phone" id="inputPhone" class="form-control" disabled>
+	</div>
+	<div class="form-group">
+		<label for="inputUser">User</label>
+		<input type="text" value="{{ app.user.user }}" name="user" id="inputUser" class="form-control" disabled>
+	</div>
+	<div class="form-group">
+		<label for="inputOrganization">Organization</label>
+		<input type="text" value="{{ app.user.organization }}" name="organization" id="inputOrganization" class="form-control" disabled>
+	</div>
+{% endblock %}
